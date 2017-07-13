@@ -1,6 +1,6 @@
 {
   "name": "music-db-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The components for the Music DB course",
   "main": "dist/index.js",
   "author": "Peter van Meijgaard <petervanmeijgaard@hotmail.com>",
