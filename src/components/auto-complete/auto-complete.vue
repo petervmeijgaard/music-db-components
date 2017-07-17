@@ -114,6 +114,26 @@
       },
 
       /**
+       * Once the component has been mounted, the query should be set.
+       * It should be the same as the value from the v-model.
+       */
+      setQuery() {
+        this.activatedThroughClick = true;
+
+        if (!this.value) {
+          this.query = null;
+          return;
+        }
+
+        if (!this.value.content) {
+          this.query = this.value;
+          return;
+        }
+
+        this.query = this.value.content;
+      },
+
+      /**
        * Method used to select an item from the auto complete list.
        */
       select(item) {
@@ -162,6 +182,13 @@
         this.activatedThroughClick = true;
         this.query = newValue.content;
       },
+    },
+
+    /**
+     * Fired once the component has been mounted.
+     */
+    mounted() {
+      this.setQuery();
     },
 
     /**
